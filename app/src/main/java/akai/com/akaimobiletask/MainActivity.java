@@ -14,7 +14,6 @@ public class MainActivity extends AppCompatActivity {
     private Button loginActivityButton;
     private EditText textField;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -32,12 +31,13 @@ public class MainActivity extends AppCompatActivity {
                                                });
 
         textField = (EditText) findViewById(R.id.mainText);
+        textField.setEnabled(false);
 
         SharedPreferences settings = getSharedPreferences("login", Context.MODE_PRIVATE);
         String myString = settings.getString("editable", "defaultvalue");
         if(myString.equals("true"))
         {
-            textField.setFocusable(true);
+            textField.setEnabled(true);
             settings.edit().remove("editable").commit();
         }
 

@@ -23,6 +23,8 @@ public class LoginActivity extends AppCompatActivity {
     private EditText mEmailView;
     private EditText mPasswordView;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,7 +53,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-
+        //TODO guest button
     }
 
     private void attemptLogin() {
@@ -108,6 +110,7 @@ public class LoginActivity extends AppCompatActivity {
 
         SharedPreferences.Editor editor = settings.edit();
         editor.putString("editable", "true");
+        editor.apply();
         editor.commit();
 
         finish();
