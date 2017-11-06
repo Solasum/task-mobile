@@ -22,13 +22,14 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        loginActivityButton = (Button) findViewById(R.id.mainButton);
-        loginActivityButton.setOnClickListener(new View.OnClickListener() {
+       // loginActivityButton = (Button) findViewById(R.id.mainButton);
+        /*loginActivityButton.setOnClickListener(new View.OnClickListener() {
                                                    @Override
                                                    public void onClick(View v) {
                                                        goToLoginActivity();
                                                    }
-                                               });
+                                               }); */
+
 
         textField = (EditText) findViewById(R.id.mainText);
         textField.setEnabled(false);

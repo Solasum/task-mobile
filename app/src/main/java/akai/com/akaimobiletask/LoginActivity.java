@@ -53,7 +53,13 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        //TODO guest button
+        Button mGuestButton = (Button) findViewById(R.id.guest);
+        mGuestButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                moveOnWithoutLoggingIn();
+            }
+        });
     }
 
     private void attemptLogin() {
@@ -96,11 +102,17 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private boolean isEmailValid(String email) {
-        return true; //TODO
+        if (email.contains("@")&&email.contains("."))
+        return true;
+        else
+            return false;
     }
 
     private boolean isPasswordValid(String password) {
-        return true; //TODO
+        if (password.length()>=6)
+        return true;
+        else
+            return false;
     }
 
     private void moveOn() {
